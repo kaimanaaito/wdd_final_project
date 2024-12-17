@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management Matrix</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 30px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #f4f4f9;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #DA70D6;
+            transform: scale(1.1);
+        }
+
+        .full-width-section {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .full-width-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .full-width-section p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        .content-left {
+            width: 60%;
+            padding-right: 15px;
+        }
+
+        .content-right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .content-right img {
+            width: 100%;
+            max-width: 450px; /* サイズを増加 */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h2, h3 {
+            font-size: 2.5em;
+            text-align: left;
+            margin-top: 30px;
+            color: #ffffff;
+        }
+
+        p, ul, li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #f4f4f9;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .toggle-button {
+            background-color: #8A2BE2;
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #1d7143;
+            transform: scale(1.05);
+        }
+
+        .content {
+            display: block; /* 初期状態では非表示のまま */
+            max-height: 0; /* 高さを0に設定 */
+            overflow: hidden; /* 内容を隠す */
+            margin-top: 15px;
+            padding: 0; /* パディングを初期化 */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .content.open {
+            max-height: 1000px; /* 十分な高さを確保 */
+            padding: 15px; /* 表示時のパディング */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="timemanagement.html">Time Management Matrix</a>
+        <a href="be.html">Behavioral Economics</a>
+    </nav>
+
+    <div class="full-width-section">
+        <h1>What is the Time Management Matrix?</h1>
+        <p>The Time Management Matrix, created by Stephen Covey, helps categorize tasks by urgency and importance. It guides you to focus on what truly matters, reducing stress and improving productivity.</p>
+    </div>
+
+    <div class="container">
+        <div class="content-left">
+            <h2>Urgent vs. Important</h2>
+            <p>Understanding the difference between urgent and important tasks is key to effective time management. Urgent tasks demand immediate attention, but they may not contribute to long-term goals. Important tasks align with your values and have lasting impact.</p>
+
+            <h2>The Four Quadrants</h2>
+            <p>The matrix divides tasks into four quadrants:</p>
+            <ul>
+                <li><strong>Quadrant I (Urgent and Important):</strong> Crisis situations and pressing deadlines. These need to be addressed immediately.</li>
+                <li><strong>Quadrant II (Not Urgent but Important):</strong> Strategic planning and personal development. These should be prioritized to prevent crises.</li>
+                <li><strong>Quadrant III (Urgent but Not Important):</strong> Distractions and interruptions. These can be delegated or minimized.</li>
+                <li><strong>Quadrant IV (Not Urgent and Not Important):</strong> Time-wasters. These should be eliminated.</li>
+            </ul>
+
+            <button class="toggle-button" onclick="toggleContent('quadrant-details')">Quadrant Details</button>
+            <div id="quadrant-details" class="content">
+                <h3>1. Quadrant I: Your Mission</h3>
+                <p>In this section, you can list tasks that are both important and urgent. By prioritizing these tasks, you can boost your productivity and manage your responsibilities more effectively.</p>
+
+                <h3>2. Quadrant II: Self-Investment</h3>
+                <p>In this area, list tasks that are important for your long-term growth but don't need to be done right away. Completing tasks here is key to personal development and getting closer to your ideal self.</p>
+
+                <h3>3. Quadrant III: Time Limited </h3>
+                <p>These are tasks that appear urgent but do not contribute to your major goals. They can often be delegated.</p>
+
+                <h3>4. Quadrant IV: Wish List</h3>
+                <p>Originally, this area was designated for non-urgent and non-important tasks, but now it serves as a "Wish List" where you can define long-term goals and visualize them, helping you stay motivated and work towards fulfilling your dreams.</p>
+            </div>
+        </div>
+
+        <div class="content-right">
+            <img src="images/matrix.jpg" alt="Time Management Matrix">
+            <img src="images/time.jpg" alt="Time management">
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+            } else {
+                content.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

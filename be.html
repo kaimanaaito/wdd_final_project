@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral Economics & Task Management</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 30px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #f4f4f9;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 0 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #DA70D6;
+            transform: scale(1.1);
+        }
+
+        .full-width-section {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .full-width-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .full-width-section p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            margin: 80px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            position: relative;
+        }
+
+        .content-left {
+            width: 60%;
+            padding-right: 15px;
+            margin-right: 5%;
+        }
+
+        .content-right {
+            width: 30%;
+            position: relative; /* absolute を削除して relative に変更 */
+            top: 80px;
+            margin-top: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column; /* 縦並びにする */
+            justify-content: flex-start; /* 上寄せ */
+            align-items: center; /* 中央揃え */
+        }
+        
+        img {
+            width: 120%;
+            height: auto;
+            margin-top: 60px; /* 画像間にスペースを追加 */
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        img[alt="emotion"], img[alt="situation"] {
+            margin-top: 40px; /* ここで調整して位置を下げる */
+        }
+        
+
+        h2, h3 {
+            font-size: 2.5em;
+            text-align: left;
+            margin-top: 30px;
+            color: #ffffff;
+        }
+
+        p, ul, li {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #f4f4f9;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .toggle-button {
+            background-color: #8A2BE2;
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #1d7143;
+            transform: scale(1.05);
+        }
+
+        .content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .content-left h2 {
+            margin-top: 20px;
+        }
+
+        .full-width-section p {
+            font-size: 1.3em;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="timemanagement.html">Time Management Matrix</a>
+        <a href="be.html">Behavioral Economics</a>
+    </nav>
+
+    <div class="full-width-section">
+        <h1>Mastering Task Management with</h1>
+        <h1>Behavioral Economics</h1>
+        <p>Behavioral economics helps us understand why we sometimes fail at managing our tasks and goals. By applying its principles, you can enhance your productivity and focus, creating better systems for task management in everyday life.</p>
+    </div>
+
+    <div class="container">
+        <div class="content-left">
+            <h2>How Behavioral Economics Enhances Task Management</h2>
+            <p>We often procrastinate, overestimate our abilities, and make decisions based on immediate rewards. Behavioral economics teaches us how to overcome these tendencies and develop more effective strategies for managing tasks.</p>
+
+            <h2>Applying Cognitive Biases to Task Management</h2>
+            <p>Understanding cognitive biases can improve task management by helping us recognize our flaws and make better decisions.</p>
+
+            <button class="toggle-button" onclick="toggleContent('cognitive-biases')">Cognitive Biases & Task Management</button>
+            <div id="cognitive-biases" class="content">
+                <h3>1. Overcoming Cognitive Biases</h3>
+                <p>Some biases that affect our task management include:</p>
+                <ul>
+                    <li><strong>Overconfidence Bias:</strong> Overestimating the time and resources needed for tasks. <em>Solution:</em> Break tasks into smaller, manageable steps and set realistic goals.</li>
+                    <li><strong>Hyperbolic Discounting:</strong> Preferring short-term gratification over long-term rewards. <em>Solution:</em> Prioritize tasks that have long-term benefits and create reminders to stay on track.</li>
+                    <li><strong>Planning Fallacy:</strong> Underestimating the time required to complete tasks. <em>Solution:</em> Plan with more buffer time and re-evaluate regularly.</li>
+                </ul>
+            </div>
+
+            <h2>Influence of Emotions on Task Completion</h2>
+            <p>Our emotions can either drive or hinder task completion. Learning how to manage emotions is crucial for productivity.</p>
+
+            <button class="toggle-button" onclick="toggleContent('emotions-task')">Emotions & Task Completion</button>
+            <div id="emotions-task" class="content">
+                <h3>2. Managing Emotions</h3>
+                <ul>
+                    <li><strong>Stress & Anxiety:</strong> High levels of stress can lead to procrastination. <em>Solution:</em> Break tasks into smaller chunks, take breaks, and focus on progress rather than perfection.</li>
+                    <li><strong>Motivation:</strong> Positive emotions can increase productivity. <em>Solution:</em> Use rewards and self-affirmation to boost motivation after completing small tasks.</li>
+                </ul>
+            </div>
+
+            <h2>Strategizing with Situational Influences</h2>
+            <p>The way tasks are presented or how our environment is structured can influence how efficiently we work on them.</p>
+
+            <button class="toggle-button" onclick="toggleContent('situational-influences')">Situational Influences & Task Management</button>
+            <div id="situational-influences" class="content">
+                <h3>3. Environmental Factors</h3>
+                <ul>
+                    <li><strong>Choice Overload:</strong> Too many choices can lead to decision paralysis. <em>Solution:</em> Limit the number of tasks or decisions in a given period to prevent overwhelm.</li>
+                    <li><strong>Choice Architecture:</strong> The way tasks are presented can influence how we approach them. <em>Solution:</em> Use simple, clear task lists with prioritized tasks for the day.</li>
+                    <li><strong>Nudge Theory:</strong> Subtle changes can help you stay on track. <em>Solution:</em> Use visual cues, reminders, and positive reinforcement to keep motivated.</li>
+                </ul>
+            </div>
+
+            <h2>Final Thoughts: Achieving Better Task Management</h2>
+            <p>By applying these behavioral economics principles, you can significantly improve your ability to manage tasks. It's about understanding your biases, emotions, and the external factors that influence your decisions. With this awareness, you can develop systems that work with human behavior rather than against it.</p>
+        </div>
+
+        <div class="content-right">
+            <img src="images/R.png" alt="Behavioral Economics">
+            <img src="images/bh.png" alt="Task Management Illustration">
+            
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
